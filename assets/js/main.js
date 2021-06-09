@@ -80,7 +80,7 @@ const modalViews = document.querySelectorAll('.services__modal'),
     modalBtns = document.querySelectorAll('.services__button'),
     modalCloses = document.querySelectorAll('.services__modal-close');
 
-let modal = function(modalClick) {
+let modal = function (modalClick) {
     modalViews[modalClick].classList.add('active-modal');
 }
 
@@ -152,7 +152,7 @@ window.addEventListener('scroll', scrollActive)
 /*==================== CHANGE BACKGROUND HEADER ====================*/
 function scrollHeader() {
     const nav = document.getElementById('header')
-        // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+    // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
     if (this.scrollY >= 80) nav.classList.add('scroll-header');
     else nav.classList.remove('scroll-header')
 }
@@ -194,7 +194,7 @@ themeButton.addEventListener('click', () => {
     // Add or remove the dark / icon theme
     document.body.classList.toggle(darkTheme)
     themeButton.classList.toggle(iconTheme)
-        // We save the theme and the current icon that the user chose
+    // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })

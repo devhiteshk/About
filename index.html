@@ -902,23 +902,23 @@
 
 
                 <form action="mailto:derive.science@gmail.com" method="POST" class="contact__form grid" id="contform">
-                    <div class="contact__inputs grid ">
-                        <div class="contact__content ">
-                            <label for="name " class="contact__label ">Name</label>
-                            <input name="name " type="text " class="contact__input ">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label class="contact__label">Name</label>
+                            <input id="cname" name="cname" type="text" class="contact__input ">
                         </div>
-                        <div class="contact__content ">
-                            <label for="email " class="contact__label ">Email</label>
-                            <input name="email " type="email " class="contact__input ">
+                        <div class="contact__content">
+                            <label class="contact__label">Email</label>
+                            <input name="email" type="email" class="contact__input">
                         </div>
-                        <div class="contact__content ">
-                            <label for="project " class="contact__label ">Project</label>
-                            <input name="project " type="text " class="contact__input ">
+                        <div class="contact__content">
+                            <label class="contact__label ">Project</label>
+                            <input id="project" name="project" type="text" class="contact__input ">
                         </div>
                     </div>
-                    <div class="contact__content ">
-                        <label for="message " class="contact__label ">Message</label>
-                        <textarea name="message " id="message " cols="0 " rows="7 " class="contact__input "></textarea>
+                    <div class="contact__content">
+                        <label class="contact__label ">Message</label>
+                        <textarea name="cmessage" id="cmessage" cols="0" rows="7 " class="contact__input "></textarea>
                     </div>
 
                     <div>
@@ -993,8 +993,11 @@
     <!-- ====================== Submit Form ===================== -->
     <script>
         function formSubmit() {
-            document.getElementById("contform").submit();
+            var body = document.getElementById("cmessage").value;
+            var subject = document.getElementById("cname").value + "  :-->  " + document.getElementById("project").value;
+            window.location.replace(`mailto:derive.science@gmail.com?body=${body}&subject=${subject} <--`);
         }
+
     </script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
