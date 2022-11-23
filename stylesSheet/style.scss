@@ -200,10 +200,16 @@ body{
 }
 
 .border{
+  border-color: hsla(345, 49%, 43%, 0.842);
+  border-style: solid;
+  border-radius: 30px;
+  border-width: 12px;
+
   margin-top: 20px; 
   margin-bottom:20px; 
   padding:30px;
-  background-color:hsla(0, 0%, 100%, 0.80);
+  
+  background-color:rgba(255, 255, 255, 0.90);
   max-width: 530px;
 }
 
